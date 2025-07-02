@@ -25,6 +25,10 @@ async def on_message(message):
     if "wifi" in content and "password" in content:
         await message.channel.send(f"{message.author.mention} the wifi info is:\nName: ValafarLab \nPassword: {wifipassword} \nSecurity: WPA3Personal")
 
+    elif "fuck" in content or "shit" in content:
+        replace = content.replace("fuck", "fadoodle").replace("shit", "shivaree")
+        await message.channel.send(f"{message.author.mention} How could you say that :frowning2:\n Don't worry, I'm sure you meant: \"{replace}\"")
+
     await bot.process_commands(message)
 
 #in Discord type /cowgif
